@@ -9,6 +9,7 @@ class SearchMapPlaceWidget extends StatefulWidget {
     this.location,
     this.radius,
     this.strictBounds = false,
+    this.leftWidget,
   }) : assert((location == null && radius == null) ||
             (location != null && radius != null));
 
@@ -40,6 +41,9 @@ class SearchMapPlaceWidget extends StatefulWidget {
 
   /// Returns only those places that are strictly within the region defined by location and radius. This is a restriction, rather than a bias, meaning that results outside this region will not be returned even if they match the user input.
   final bool strictBounds;
+
+  // The widget on the left inside the address search input
+  final Widget leftWidget;
 
   @override
   _SearchMapPlaceWidgetState createState() => _SearchMapPlaceWidgetState();
@@ -128,6 +132,8 @@ class _SearchMapPlaceWidgetState extends State<SearchMapPlaceWidget>
     return Center(
       child: Row(
         children: <Widget>[
+          widget.leftWidget != null ? widget.leftWidget : Container(), 
+          widget.leftWidget != null ? Container(width: 15) : Container(),
           Expanded(
             child: TextField(
               decoration: _inputStyle(),
