@@ -179,7 +179,7 @@ class _SearchMapPlaceWidgetState extends State<SearchMapPlaceWidget>
   // Styling
   InputDecoration _inputStyle() {
     return InputDecoration(
-      hintText: "Search",
+      hintText: widget.language == 'fr' ? "Rechercher" : "Search",
       border: InputBorder.none,
       contentPadding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
     );

@@ -44,7 +44,7 @@ packages:
     description:
       path: "packages/google_maps_flutter"
       ref: HEAD
-      resolved-ref: "400bd781e74ac960fc2463d3c42833a2db64b7d1"
+      resolved-ref: "468b4aee0e4f60b8e2d5177da4f5cf744e265565"
       url: "git://github.com/Eimji/plugins"
     source: git
     version: "0.5.16+1"
